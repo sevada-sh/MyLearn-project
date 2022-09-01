@@ -1,0 +1,53 @@
+﻿@page
+@model MyLearn.Mvc.Pages.Admin.Courses.ShowCoursesModel
+@{
+}
+
+<a class="btn btn-success" asp-page="AddCourse">اضافه کردن دوره</a>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped table-hover align-items-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">عکس</th>
+                    <th scope="col">تام</th>
+                    <th scope="col">استاد</th>
+                    <th scope="col">قیمت</th>
+                    <th scope="col">ساعت</th>
+                    <th scope="col">توضیحات</th>
+                    <th scope="col">تگ ها</th>
+                    <th scope="col">سطح</th>
+                    <th scope="col">وضیعت برگذاری</th>
+                    <th scope="col">تخفیف</th>
+                    <th scope="col">دستورات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Courses)
+                {
+                    <tr>
+                        <th scope="row">@item.CourseId</th>
+                        <th>
+                            <img src="/images/Courses/@(item.CourseId).jpg" alt="CourseImg" style="max-width:200px;border:1px solid gray;padding:3px">
+                        </th>
+                        <th>@item.CourseName</th>
+                        <th>@item.CourseTeacher</th>
+                        <th>@item.CoursePrice</th>
+                        <th>@item.CourseTime</th>
+                        <th>@item.CourseDescription</th>
+                        <th>@item.CourseTags</th>
+                        <th>@item.CourseLevel</th>
+                        <th>@item.CourseIsHolding</th>
+                        <th>@item.Discount</th>
+                        <th>
+                            <a asp-page="EditCourse" class="btn btn-warning text-white">ویرایش</a>
+                            <a asp-page="ِDeleteCourse" class="btn btn-danger">حذف</a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

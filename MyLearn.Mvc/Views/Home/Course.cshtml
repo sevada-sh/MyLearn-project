@@ -1,0 +1,111 @@
+﻿@model MyLearn.Domain.Models.Course
+
+<div class="container coursepage">
+    <h4 class="text-start mb-5">@Model.CourseName</h4>
+    <div class="row row-sm">
+        <div class="box-shadow mb-5 px-5 py-2">
+            <img src="/images/static/takhfif-banner.gif" class="px-5 py-2 img-fluid" />
+        </div>
+        <div class="col col-8 col-sm-12 col-md-8">
+            <div class="box-shadow  rounded-3 p-3 py-0 mb-4">
+                <img src="~/images/Courses/@(Model.CourseId).jpg" width="700" class="img-fluid" />
+                <p class="text-start mt-5">@Model.CourseDescription</p>
+            </div>
+
+            <div class="mb-3">
+                <img src="/images/static/ToplearnInstagram.png" width="300" class="mx-5 mb-2" />
+                <img src="/images/static/ToplearnTelegram.png" width="300" />
+            </div>
+
+            <div class="box-shadow text-start p-3" dir="rtl">
+                <h1>نظرات کاربران در رابطه با این دوره</h1>
+                <h5>نظر خود را وارد کنید</h5>
+                <div id="editor">
+                </div>
+                <input class="btn btn-success" type="button" onclick="AddComment" value="ارسال" />
+                <ul id="commentList">
+                    @await Component.InvokeAsync("CommentsComponent")
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="col-sm-12 col-md-4">
+            <div class="rounded-3 pb-4">
+                <img src="/images/static/learnby.png" class="img-fluid">
+            </div>
+
+            <div class="box-shadow mb-4">
+                <img src="/images/static/GooleEngine.png" width="400" class="rounded-3 img-fluid">
+            </div>
+
+            <div class="box-shadow rounded-3 text-start p-4">
+                <ul class="list-unstyled">
+                    <li>
+                        <p>قیمت این دوره: @Model.CoursePrice <i class='bx bx-dollar text-success'></i></i></p>
+                    </li>
+                    <hr class="h-75 text-light">
+                    <li>
+                        <p> مدرس دوره: @Model.CourseTeacher<i class='bx bx-user'></i></p>
+                    </li>
+                    <li>
+                        <p> تعداد ویدیو ها: @Model.CourseVideosCount<i class='bx bx-video'></i></p>
+                    </li>
+                    <li>
+                        <p>مدت زمان دوره: @Model.CourseTime<i class='bx bx-time'></i></p>
+                    </li>
+                    <li>
+                        <p>سطح دوره: @Model.CourseLevel<i class='bx bx-menu'></i></p>
+                    </li>
+                    <li>
+                        <p>@Model.CourseIsHolding :وضیعت دوره<i class='bx bx-info-circle'></i></p>
+                    </li>
+                    <li>
+                        <form>
+                            <input asp-controller="Home" asp-action="AddToCart" asp-route-courseId="@Model.CourseId" type="submit" class="btn btn-success" value="ثبت نام در این دوره">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-shadow p-4 mt-4 tags">
+                <h5 class="text-start">برچسب ها<i class='bx bx-purchase-tag-alt'></i></h5>
+                @foreach (var item in Model.CourseTags.Split(','))
+                {
+                    <a href="/courses?search=@item" class="text-dark bg-light p-1 text-decoration-none">@item</a>
+                }
+            </div>
+            <div class="text-start w-100">
+                <input class="btn btn-outline-danger mb-3 mt-4 w-100" value="پرسش سوال در رابطه با این دوره" />
+                <input class="btn btn-outline-info w-100" value="افزودن به علاقه مندی ها" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script src="~/lib/ckeditor/ckeditor.js"></script>
+    <script src="~/lib/ckeditor/adapters/jquery.js"></script>
+
+    <script>
+        //function AddComment() {
+        //    $.ajax({
+        //        url: "/Components/CommentsComponent/InvokeAsync",
+        //        type: "Get",
+        //        data: { comment: $("#editor").val() }
+        //    }).done(function(result) {
+        //        $("#commentList").html(result);
+        //        $("#editor").val("");
+        //    });
+        //}
+
+        $(function() {
+            $("#editor").ckeditor();
+        });
+    </script>
+
+    }
+
+
+

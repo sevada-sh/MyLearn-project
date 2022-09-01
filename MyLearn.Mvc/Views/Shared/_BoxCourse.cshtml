@@ -1,0 +1,18 @@
+﻿@model MyLearn.Domain.Models.Course
+
+<div class="col-md-3 col-sm-12 mb-5" dir="rtl">
+    <div class="card box-shadow rounded-3">
+        <a asp-action="Course" asp-controller="Home" asp-route-courseId="@Model.CourseId"><img src="~/images/Courses/@(Model.CourseId).jpg" class="card-img-top" alt="CourseImg"></a>
+        <div class="card-body">
+            <a asp-action="Course" asp-controller="Home" asp-route-courseId="@Model.CourseId" class="card-title text-decoration-none text-dark text-start"><h5>@Model.CourseName</h5></a>
+            <p class="text-start pt-2">
+                <i class="bi bi-person"></i>
+                @Model.CourseTeacher
+            </p>
+
+        </div>
+        <div class="card-footer bg-white">
+            <span class="text-success">@Model.CoursePrice تومان</span>
+        </div>
+    </div>
+</div>

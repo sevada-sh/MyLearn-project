@@ -1,0 +1,19 @@
+﻿.body {
+    filter: blur(5px);
+    overflow: hidden;
+}
+
+/*start preloader*/
+
+.preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+}
+
+.hidepreloader {
+    display: none !important;
+}
+
+/*end preloader*/

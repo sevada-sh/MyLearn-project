@@ -1,0 +1,25 @@
+﻿@page
+@model MyLearn.Mvc.Pages.Admin.Articles.EditArticleModel
+@{
+}
+
+<h1>ویرایش محصول</h1>
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="Article.ArticleName"></label>
+    <input asp-for="Article.ArticleName" class="form-control" />
+    <span asp-validation-for="Article.ArticleName"></span>
+    <br />
+    <label asp-for="Article.ArticleWriter"></label>
+    <input asp-for="Article.ArticleWriter" class="form-control" />
+    <span asp-validation-for="Article.ArticleWriter"></span>
+    <br />
+    <label asp-for="Article.ArticleText"></label>
+    <input asp-for="Article.ArticleText" class="form-control" />
+    <span asp-validation-for="Article.ArticleText"></span>
+    <br />
+    <label asp-for="Article.ArticleImage"></label>
+    <input asp-for="Article.ArticleImage" class="form-control" />
+    <span asp-validation-for="Article.ArticleImage"></span>
+    <br />
+    <input class="btn btn-warning" type="submit" value="ویرایش" />
+</form>

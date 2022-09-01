@@ -1,0 +1,30 @@
+﻿@model MyLearn.Domain.Models.Account
+
+<div class="card box-shadow">
+    <div class="container">
+        <div class="card-header">
+            اکانت اعضای ویژه ی سایت
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning">
+                درحال حاضر شما عضو ویژه سایت نمی باشید ! درصورت تمایل برای استفاده از امکانات اعضای ویژه باید اشتراک خریداری نمایید
+            </div>
+            <input class="btn btn-success" type="button" />
+        </div>
+    </div>
+</div>
+
+<div class="card box-shadow">
+    <div class="container">
+        <div class="card-header">
+            اطلاعات حساب کاربری
+        </div>
+        <div class="card-body">
+            <i class="bi bi-person"></i>
+            <p>نام و نام خانوادگی یا نام کاربری:@Model.UserName</p>
+
+            <i class="bi bi-envelope"></i>
+            <p>ایمیل:@Model.Email</p>
+        </div>
+    </div>
+</div>

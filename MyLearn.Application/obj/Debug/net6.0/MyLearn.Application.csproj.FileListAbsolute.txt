@@ -1,0 +1,17 @@
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.csproj.AssemblyReference.cache
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.AssemblyInfoInputs.cache
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.AssemblyInfo.cs
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Application.deps.json
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Application.dll
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Application.pdb
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.dll
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\refint\MyLearn.Application.dll
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.pdb
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\ref\MyLearn.Application.dll
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Domain.dll
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Domain.pdb
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.csproj.CopyComplete
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\bin\Debug\net6.0\MyLearn.Application.runtimeconfig.json
+C:\Users\Home\Desktop\MyLearn\MyLearn.Application\obj\Debug\net6.0\MyLearn.Application.genruntimeconfig.cache

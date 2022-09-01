@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MyLearn.Domain.Models.Comment>
+@foreach (var item in Model)
+{
+    <li>
+        <div>
+            <span>@item.accounts.UserName</span>
+        </div>
+        <p>@item.Commenttext</p>
+    </li>
+}

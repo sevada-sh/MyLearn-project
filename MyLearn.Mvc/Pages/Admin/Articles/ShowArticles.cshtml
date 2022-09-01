@@ -1,0 +1,43 @@
+﻿@page
+@model MyLearn.Mvc.Pages.Admin.Articles.ShowArticlesModel
+@{
+}
+<a class="btn btn-success" asp-page="AddArticle">اضافه کردن مقاله</a>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped table-hover table-dark">
+            <thead class="">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">عکس</th>
+                    <th scope="col">تام</th>
+                    <th scope="col">نویسنده</th>
+                    <th scope="col">متن</th>
+                    <th scope="col">تاریخ انتشار</th>
+                    <th scope="col">تعداد بازدید کننده</th>
+                    <th scope="col">دستورات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Articles)
+                {
+                    <tr>
+                        <th scope="row">@item.ArticleId</th>
+                        <th>
+                            <img src="/images/Article/@(item.ArticleId).png" alt="ArticleImg" style="max-width:200px;border:1px solid gray;padding:3px">
+                        </th>
+                        <th>@item.ArticleName</th>
+                        <th>@item.ArticleWriter</th>
+                        <th>@item.ArticleText</th>
+                        <th>@item.CreatedDate</th>
+                        <th>@item.ArticeView</th>
+                        <th>
+                            <a asp-page="EditArticle" class="btn btn-warning text-white">ویرایش</a>
+                            <a asp-page="ِDeleteArticle" class="btn btn-danger">حذف</a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

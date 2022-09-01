@@ -1,0 +1,108 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Iranian Sans",Tahoma;
+}
+
+table {
+    display: table;
+    vertical-align: middle;
+}
+
+
+/*start scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 9px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+/*end scrollbar*/
+
+/*start preloader*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--mainWhite);
+    z-index: 999;
+    filter: blur(5px);
+}
+
+.hidepreloader {
+    display: none !important;
+}
+
+/*end preloader*/
+
+.bg-dark {
+    margin-left: -330px;
+}
+
+header {
+    height: 48px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+
+/*.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}*/
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: calc(100vh- 48px);
+    width: 200px;
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+    nav ul {
+        list-style: none;
+    }
+
+        nav ul li {
+            padding: 10px 25px;
+        }
+
+.nav-item {
+    color: #212529;
+    text-decoration: none;
+}
+
+main {
+    width: calc(100vw- 200px);
+    padding: 50px;
+}

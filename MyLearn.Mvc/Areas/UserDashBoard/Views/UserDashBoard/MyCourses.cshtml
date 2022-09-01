@@ -1,0 +1,30 @@
+﻿<div class="card box-shadow">
+    <div class="container">
+        <div class="card-header">
+            دوره های من
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>جهت دریافت مدرک برای هر دوره بر روی "درخواست" کلیک کنید</li>
+                <li>پس از ارسال مشخصات خود و تایید کارشناسان، می توانید مدرک خود را دانلود نمایید</li>
+                <li>لطفا در ارسال مشخصات خود دقت نمایید، بعد از تایید امکان ویرایش وجود ندارد</li>
+            </ul>
+
+            <table>
+                <tr>
+                    <th>عنوان آموزش</th>
+                    <th>مدرک</th>
+                </tr>
+                <tr>
+                    @foreach (var item in Model)
+                    {
+                        <td class="text-primary"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary">درخواست</button>
+                        </td>
+                    }
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

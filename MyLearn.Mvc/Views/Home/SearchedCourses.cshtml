@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MyLearn.Domain.Models.Course>
+
+
+<div dir="rtl">
+    <h3 class="mb-5 text-start">دوره های آموزشی @ViewBag.Name تاپلرن <small class="text-secondary">(@Model.Count())</small> </h3>
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <partial name="_BoxCourse" model="@item"></partial>
+        }
+
+    </div>
+</div>

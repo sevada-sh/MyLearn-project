@@ -1,0 +1,49 @@
+﻿@page 
+@model MyLearn.Mvc.Pages.Admin.Courses.AddCourseModel
+@{
+}
+
+<h1>افزودن محصول</h1>
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="Course.CourseName"></label>
+    <input asp-for="Course.CourseName" class="form-control" />
+    <span asp-validation-for="Course.CourseName"></span>
+    <br />
+    <label asp-for="Course.CourseTeacher"></label>
+    <input asp-for="Course.CourseTeacher" class="form-control" />
+    <span asp-validation-for="Course.CourseTeacher"></span>
+    <br />
+    <label asp-for="Course.CoursePrice"></label>
+    <input asp-for="Course.CoursePrice" class="form-control" />
+    <span asp-validation-for="Course.CoursePrice"></span>
+    <br />
+    <label asp-for="Course.CourseDescription"></label>
+    <input asp-for="Course.CourseDescription" class="form-control" />
+    <span asp-validation-for="Course.CourseDescription"></span>
+    <br />
+    <label asp-for="Course.CourseTags"></label>
+    <input asp-for="Course.CourseTags" class="form-control" />
+    <span asp-validation-for="Course.CourseTags"></span>
+    <br />
+    <label asp-for="Course.Discount"></label>
+    <input asp-for="Course.Discount" class="form-control" />
+    <span asp-validation-for="Course.Discount"></span>
+    <br />
+    <label asp-for="Course.CourseVideosCount"></label>
+    <input type="number" asp-for="Course.CourseVideosCount" class="form-control" />
+    <span asp-validation-for="Course.CourseVideosCount"></span>
+    <br />
+    <label asp-for="Course.CourseLevel"></label>
+    <input asp-for="Course.CourseLevel" class="form-control" />
+    <span asp-validation-for="Course.CourseLevel"></span>
+    <br />
+    <label asp-for="Course.CourseIsHolding"></label>
+    <input type="checkbox" asp-for="Course.CourseIsHolding" class="form-control" />
+    <span asp-validation-for="Course.CourseIsHolding"></span>
+    <br />
+    <label asp-for="Course.CourseImage"></label>
+    <input asp-for="Course.CourseImage" class="form-control" />
+    <span asp-validation-for="Course.CourseImage"></span>
+    <br />
+    <input class="btn btn-success" type="submit" value="ثبت" />
+</form>

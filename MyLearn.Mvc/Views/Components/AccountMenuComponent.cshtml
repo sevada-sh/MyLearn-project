@@ -1,0 +1,78 @@
+﻿<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <img src="/images/static/logo.svg" />
+            <div class="logo_name pl-4">MyLearn</div>
+        </div>
+        <div type="button" class="hamburger AccountMenubtn" id="btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <form asp-action="courses" asp-conroller="Home" method="get">
+                <i class='bx bx-search'></i>
+                <input type="search" name="Search" placeholder="...جست و جو">
+                <span class="tooltip"><b>جست و جو</b></span>
+            </form>
+        </li>
+        <li>
+            <a asp-action="Index" asp-controller="UserDashBoard">
+                <i class='bx bx-user'></i>
+                <span class="links_name">مشاهده حساب کاربری</span>
+            </a>
+            <span class="tooltip text-nowrap"><b>مشاهده حساب</b></span>
+        </li>
+        <li>
+            <a asp-action="EditProfile" asp-controller="UserDashBoard">
+                <i class='bx bx-edit'></i>
+                <span class="links_name">ویرایش حساب کاربری</span>
+            </a>
+            <span class="tooltip text-nowrap"><b>ویرایش حساب</b></span>
+        </li>
+        <li>
+            <a asp-action="ChangePassword" asp-controller="UserDashBoard">
+                <i class='bx bxs-key'></i>
+                <span class="links_name">تغییر رمز عبور</span>
+            </a>
+            <span class="tooltip"><b>تغییر رمز عبور</b></span>
+        </li>
+        <li>
+            <a asp-action="Wallet" asp-controller="UserDashBoard">
+                <i class='bx bx-wallet'></i>
+                <span class="links_name">کیف پول من</span>
+            </a>
+            <span class="tooltip"><b>کیف پول من</b></span>
+        </li>
+        <li>
+            <a asp-action="MyCourses" asp-controller="UserDashBoard">
+                <i class='bx bxs-inbox'></i>
+                <span class="links_name">دوره های من</span>
+            </a>
+            <span class="tooltip"><b>دوره های من</b></span>
+        </li>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_detail">
+        <li class="mode">
+            <div class="moon-sun">
+                <i class="bx bx-moon icon moon"></i>
+                <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark Mode</span>
+
+            <div class="toggle-switch">
+                <span class="switch"></span>
+            </div>
+        </li>
+</div>
+<a asp-action="Logout" asp-controller="UserDashBoard">
+    <i class='bx bx-log-out' id="log_out"></i>
+</a>
+<span class="links_name"></span>
+            </div>
+        </div>
+    </ul>
+</div>

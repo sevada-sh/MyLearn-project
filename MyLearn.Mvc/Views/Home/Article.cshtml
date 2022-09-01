@@ -1,0 +1,12 @@
+﻿@model MyLearn.Domain.Models.Article
+
+<div class="container" dir="rtl">
+    <h3 class="text-start text-nowrap-md text-wrap-sm pb-4">@Model.ArticleName</h3>
+    <div class="col-9 mx-auto">
+        <div class="box-shadow rounded-3 p-3">
+            <img src="/images/Article/@(Model.ArticleId).png" width="800" class="img-fluid"/>
+            <h4 class="text-nowrap-md pt-3 pb-3 text-wrap-sm text-start">@Model.ArticleName</h4>
+            <p class="text-justify text-start pb-3 articletext">@Model.ArticleText</p>
+        </div>
+    </div>
+</div>

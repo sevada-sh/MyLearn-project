@@ -1,0 +1,84 @@
+﻿@model MyLearn.Application.ViewModels.ShowingArticleAndCourseViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div dir="rtl">
+    <div class="row">
+        <h2 class="text-info text-start pb-4">دوره های تاپ لرن</h2>
+        @foreach (var item in Model.courses)
+        {
+            <partial name="_BoxCourse" model="@item"></partial>
+        }
+    </div>
+</div>
+@section IndexPageSection{
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        @await Component.InvokeAsync("AccountMenuComponent")
+    }
+
+
+    <div>
+        <img src="~/images/static/main.jfif" class="mainimg" />
+        <div class="mt-5 mb-5">
+            <h1 class="text-nowrap text-center text-white">خودآموزی ، کسب تجربه ، ورود به بازار کار با تاپ لرن</h1>
+            <h2 class="text-nowrap text-center text-white">با کمترینــــ هزینه خودت حرفه ایــــ یاد بگیـر</h2>
+        </div>
+
+        <form asp-action="courses" asp-controller="Home" method="get" class="form-group col-md-5 col-sm-5  d-flex mt-5 pb-5 bg-light mx-auto rounded-pill search" dir="rtl">
+            <div class="bg-white d-flex  mx-auto rounded-pill w-75 py-2 px-5 searchinput">
+                <span class="input-group-text border-left-0 bg-white border-white srt">
+                    <a>
+                        <i class="bi bi-search text-primary"></i>
+                    </a>
+                </span>
+                <input type="search" class="form-control border-right-0 border-white srt" name="search" placeholder="چی میخوای یاد بگیری؟">
+            </div>
+        </form>
+
+
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5 text-white threepic">
+                <div class="HeaderItem col-md-4 col-sm-12 text-center">
+                    <i class="bi bi-book threepicsicons"></i>
+                    <div>
+                        <span class="text-center">1000</span><br />
+                        <span><b>نفر دانشجو</b></span>
+                    </div>
+                </div>
+                <div class="HeaderItem col-4  text-center">
+                    <i class="bi bi-vector-pen threepicsicons"></i>
+                    <div>
+                        <span class="text-center">1000</span><br />
+                        <span><b>مدرس مجرب</b></span>
+                    </div>
+                </div>
+                <div class="HeaderItem col-4 text-center">
+                    <i class="bi bi-alarm threepicsicons"></i>
+                    <div>
+                        <span class="text-center">1000</span><br />
+                        <span><b>دقیقه آموزش</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @await Component.InvokeAsync("CategoriesComponent")
+    }
+
+    <div dir="rtl">
+        <div class="row">
+            <h2 class="text-info text-start pb-4">مقالات تاپ لرن</h2>
+            @foreach (var item in Model.articles)
+        {
+            <partial name="_BoxArticle" model="@item" dir="rtl"></partial>
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/sidebar.js"></script>
+                        }

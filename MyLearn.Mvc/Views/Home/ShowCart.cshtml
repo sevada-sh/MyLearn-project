@@ -1,0 +1,37 @@
+﻿@model MyLearn.Domain.Models.Factor
+@{
+    ViewData["Title"] = "ShowCart";
+}
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>کالا</th>
+                <th>تعداد</th>
+                <th>قیمت</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.factordetails)
+            {
+                <tr>
+                    <td>@item.courses.CourseName</td>
+                    <td>@item.Count</td>
+                    <td>@(item.Count * item.Price)</td>
+                    <td><a asp-action="RemoveCart" asp-route-detailId="@item.DetailId">حذف</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="Payment">تایید و پرداخت نهایی</a>
+
+    <h5> جمه کل: @Model.factordetails.Sum(s=>s.Count *s.Price)</h5>
+}
+else
+{
+    <div class="alert alert-danger">فاکتوری نیست</div>
+}

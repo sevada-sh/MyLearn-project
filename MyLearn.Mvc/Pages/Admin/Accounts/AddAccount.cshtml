@@ -1,0 +1,37 @@
+﻿@page "/AddAccount"
+@model MyLearn.Mvc.Pages.Admin.Accounts.AddAccountModel
+@{
+}
+
+<h1>افزودن کاربر</h1>
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="Account.UserName"></label>
+    <input asp-for="Account.UserName" class="form-control" />
+    <span asp-validation-for="Account.UserName"></span>
+    <br />
+    <label asp-for="Account.Email"></label>
+    <input asp-for="Account.Email" class="form-control" />
+    <span asp-validation-for="Account.Email"></span>
+    <br />
+    <label asp-for="Account.Password"></label>
+    <input asp-for="Account.Password" class="form-control" />
+    <span asp-validation-for="Account.Password"></span>
+    <br />
+    <label asp-for="Account.IsAdmin"></label>
+    <input type="checkbox" asp-for="Account.IsAdmin" class="form-check" />
+    <span asp-validation-for="Account.IsAdmin"></span>
+    <br />
+    <label asp-for="Account.IsTeacher"></label>
+    <input type="checkbox" asp-for="Account.IsTeacher" class="form-check" />
+    <span asp-validation-for="Account.IsTeacher"></span>
+    <br />
+    <label asp-for="Account.IsWriter"></label>
+    <input type="checkbox" asp-for="Account.IsWriter" class="form-check" />
+    <span asp-validation-for="Account.IsWriter"></span>
+    <br />
+    <label asp-for="Account.AccountImage"></label>
+    <input asp-for="Account.AccountImage" class="form-control" />
+    <span asp-validation-for="Account.AccountImage"></span>
+    <br />
+    <input class="btn btn-success" type="submit" value="ثبت" />
+</form>

@@ -1,0 +1,25 @@
+﻿@model MyLearn.Domain.Models.Article
+
+<div class="col-md-3 col-sm-12 mb-5" dir="rtl">
+    <div class="card box-shadow rounded-3">
+        <a asp-action="Article" asp-controller="Home" asp-route-articleId="@Model.ArticleId">
+            <img src="~/images/Article/@(Model.ArticleId).png" class="card-img-top articleimg" alt="ArticleImg">
+        </a>
+        <div class="card-body">
+            <b>
+                <a asp-action="Article" asp-controller="Home" asp-route-articleId="@Model.ArticleId" class="card-title text-decoration-none text-dark text-start"><b>@Model.ArticleName</b></a>
+            </b><br /><br />
+            <p class="text-start text-justify">@Model.ArticleText.Substring(0,100)</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between bg-white">
+            <span>
+                <i class="bi bi-eye text-success"></i>
+                @Model.ArticeView
+            </span>
+            <span class="text-primary">
+                <i class="bi bi-person"></i>
+                @Model.ArticleWriter
+            </span>
+        </div>
+    </div>
+</div>
